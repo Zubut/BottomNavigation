@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+            android:id="@+id/nav_1"
+            android:icon="@drawable/ic_android"
+            android:title="Position 1"
+            app:showAsAction="ifRoom" />
+
+    <item
+            android:id="@+id/nav_2"
+            android:icon="@drawable/ic_android"
+            android:title="Position 2"
+            app:showAsAction="ifRoom" />
+
+    <item
+            android:id="@+id/nav_3"
+            android:icon="@drawable/ic_android"
+            android:title="Position 3"
+            app:showAsAction="ifRoom" />
+
+</menu>

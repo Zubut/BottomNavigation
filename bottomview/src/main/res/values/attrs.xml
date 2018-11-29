@@ -1,0 +1,8 @@
+<resources>
+    <declare-styleable name="Common">
+        <attr name="position" format="integer" />
+        <attr name="marginLeft" format="integer" />
+        <attr name="badgeColor" format="color" />
+        <attr name="menuElement" format="reference" />
+    </declare-styleable>
+</resources>
