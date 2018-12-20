@@ -12,7 +12,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:background="#ffffff"
-            app:position="1"
+            app:position="0"
             app:menu="@menu/menu_main"
+            app:badgeColor="@android:color/holo_blue_dark"
         />
 </RelativeLayout>

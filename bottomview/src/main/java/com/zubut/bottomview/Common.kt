@@ -41,16 +41,17 @@ class Common constructor(context: Context, attrs: AttributeSet) : BottomNavigati
 
     override fun addBadge() {
         mPosition?.let { position ->
-            if (position > 0) {
+            if (position >= 0) {
                 // Remove old badge
                 this.removeBadge()
+
                 val drawable = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     resources.getDrawable(R.drawable.ic_badge, null)
                 } else {
                     resources.getDrawable(R.drawable.ic_badge)
                 }
 
-                drawable.setColorFilter(mBadgeColor!! , PorterDuff.Mode.MULTIPLY)
+                drawable.mutate().setColorFilter(mBadgeColor!! , PorterDuff.Mode.MULTIPLY)
 
                 val bottomNavigationMenuView = getChildAt(0) as BottomNavigationMenuView
                 val v = bottomNavigationMenuView.getChildAt(position)
@@ -69,7 +70,7 @@ class Common constructor(context: Context, attrs: AttributeSet) : BottomNavigati
 
     override fun removeBadge() {
         mPosition?.let { position ->
-            if (position > 0) {
+            if (position >= 0) {
                 val bottomNavigationMenuView = getChildAt(0) as BottomNavigationMenuView
                 val v = bottomNavigationMenuView.getChildAt(position)
                 val itemView = v as BottomNavigationItemView
@@ -79,4 +80,5 @@ class Common constructor(context: Context, attrs: AttributeSet) : BottomNavigati
             }
         }
     }
+
 }
